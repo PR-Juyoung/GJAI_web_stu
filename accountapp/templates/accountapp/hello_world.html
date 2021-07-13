@@ -3,12 +3,15 @@
 {% block content %}
 
     <div style="margin: 2rem; text-align: center">
-        <h1>METHOD</h1>
+        <h1 style="font-family: 'Pacifico', cursive"
+            class="m-5">
+            hello world list
+        </h1>
 
         <form action="/accounts/hello_world/" method="post">
             {% csrf_token %}
 
-            <div class="input-group mb-3 m-auto">
+            <div class="input-group mb-3 w-50 m-auto">
                 <input type="text" class="form-control"
                        name="hello_world_input">
                 <button class="btn btn-dark" type="submit">
@@ -22,7 +25,7 @@
             {% for hello_world in hello_world_list %}
                 <h3>{{ hello_world.text }}</h3>
             {% endfor %}
-            
+
         {% endif %}
     </div>
 
