@@ -6,9 +6,10 @@ from django.urls import reverse_lazy, reverse
 from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
 
+from articleapp.decorators import article_ownership_required
 from articleapp.forms import ArticleCretionForm
 from articleapp.models import Article
-from articleapp.templates.articleapp.decorators import article_ownership_required
+
 
 
 @method_decorator(login_required, 'get')
