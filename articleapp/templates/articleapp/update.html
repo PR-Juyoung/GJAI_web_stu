@@ -8,7 +8,7 @@
             <h4>Update Article</h4>
         </div>
         <div>
-            <form action="{% url 'accountapp:update' pk=target_article.pk %}"
+            <form action="{% url 'articleapp:update' pk=target_article.pk %}"
                   method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% bootstrap_form form %}
