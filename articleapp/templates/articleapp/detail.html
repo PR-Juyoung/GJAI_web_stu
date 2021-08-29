@@ -25,12 +25,12 @@
         <hr>
 
         <div class="my-5">
-            {#          제목,  글쓴이,  작성일            #}
+            {#          게시글 대표이미지, 글내용          #}
             <img src="{{ target_article.image.url }}"
                  class="article_image"
                  alt="">
             <div class="article_content">
-                {{ target_article.content }}
+                {{ target_article.content | safe }}
             </div>
             {% if target_article.writer == user %}
             <div>
